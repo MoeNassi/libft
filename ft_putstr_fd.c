@@ -1,40 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/11 18:49:35 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/19 09:27:58 by mnassi           ###   ########.fr       */
+/*   Created: 2022/10/18 17:48:00 by mnassi            #+#    #+#             */
+/*   Updated: 2022/10/18 18:38:38 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t	dstsize)
+void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	j;
 	int		i;
-	size_t	dlen;
-	size_t	slen;
-	char	*s;
 
-	s = (char *)src;
-	j = 0;
 	i = 0;
-	slen = ft_strlen(src);
-	dlen = ft_strlen(dst);
-	if (dstsize < dlen)
-		return (slen + dstsize);
-	while (dst[i] != '\0')
-		i++;
-	while (src[j] != '\0' && j <= dstsize - dlen - 1)
+	if (!s)
+		return ;
+	while (s[i] != '\0')
 	{
-		dst[i] = src[j];
-		j++;
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
-	dst[i] = '\0';
-	return (dlen + slen);
 }

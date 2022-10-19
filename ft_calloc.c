@@ -6,7 +6,7 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 02:04:29 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/17 09:56:15 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/10/18 17:02:54 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,6 @@ void	*ft_calloc(size_t count, size_t size)
 	s = malloc(count * sizeof(char));
 	if (!s)
 		return (NULL);
-	while (i < count)
-	{
-		s[i] = 0;
-		i++;
-	}
+	ft_bzero(s, (count * size));
 	return (s);
 }

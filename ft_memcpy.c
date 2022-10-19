@@ -6,29 +6,28 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 05:21:19 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/16 13:17:25 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/10/19 09:25:58 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-void	ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	int				i;
+	size_t			i;
 	unsigned char	*d;
 	unsigned char	*s;
 
 	i = 0;
 	d = (unsigned char *)dst;
 	s = (unsigned char *)src;
-	while (*(d + i) != '\0')
-		i++;
-	while (n > 0)
+	if (!d && !s)
+		return (0);
+	while (i < n)
 	{
-		*(d + n) = *(s + n);
-		n--;
+		d[i] = s[i];
+		i++;
 	}
-	if (n == 0)
-		*(d + 0) = *(s + 0);
+	return (d);
 }
