@@ -6,33 +6,31 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 10:00:55 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/16 12:35:20 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/10/19 16:55:14 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <stdlib.h>
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*p;
-	char	*l;
-	int		i;
+	size_t		i;
+	char		*p;
+	char		*l;
+	size_t		y;
 
 	i = 0;
 	p = (char *)s;
-	l = malloc(len * sizeof(char));
-	while (p[i] != '\0')
+	y = ft_strlen(p);
+	l = malloc((y + 1) * sizeof(char));
+	if (!l)
+		return (0);
+	while (start <= len)
 	{
-		if (p[i] == start)
-		{
-			while (p[i] != '\0' && i < len)
-			{
-				l[i] = p[i];
-				i++;
-			}
-		}
-		i++;
+		ft_memcpy(l, p, len);
+		start++;
 	}
-	return (p);
+	l[i] = '\0';
+	return (l);
 }
