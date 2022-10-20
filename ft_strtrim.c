@@ -1,41 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/16 10:00:55 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/20 13:49:41 by mnassi           ###   ########.fr       */
+/*   Created: 2022/10/20 09:19:16 by mnassi            #+#    #+#             */
+/*   Updated: 2022/10/20 14:37:13 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stdio.h>
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char		*l;
-	size_t		j;
-	size_t		o;
+	int		start;
+	int		end;
+	char	*s;
 
-	j = 0;
-	if (s)
-	{
-		o = ft_strlen(s);
-		l = malloc(len * sizeof(char) + 1);
-		if (!l)
-			return (0);
-		if (start >= o)
-			return (l);
-		while (j < len && start <= o)
-		{
-			l[j] = s[start];
-			j++;
-			start++;
-		}
-		l[j] = '\0';
-		return (l);
-	}
-	return (0);
+	start = 0;
+	end = 0;
+	end = ft_strlen(s1);
+	s = malloc(end * sizeof(char));
+	if (!s)
+		return (NULL);
+	while (s1[start] == set)
+		start++;
+		
+	while (s1[end] == set)
+		end--;
+	
 }
