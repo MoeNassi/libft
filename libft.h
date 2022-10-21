@@ -6,7 +6,7 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 13:20:19 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/19 18:38:39 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/10/21 16:21:42 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t	ft_strlen(const char *s);
-size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t n);
+size_t	ft_strlcpy(char *dst, const char *src, size_t n);
 char	*ft_strchr(const char *s, int c);
 void	*ft_memset(void *b, int c, size_t len);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
@@ -47,5 +47,6 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 void	*ft_strdup(const char *s1);
+char	*ft_strtrim(char const *s1, char const *set);
 
 #endif

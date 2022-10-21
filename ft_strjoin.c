@@ -6,7 +6,7 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 10:38:36 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/20 08:58:06 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/10/21 16:02:24 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,24 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char		*l;
 	int			u;
-	char		*p;
+	int			j;
 	int			slenght;
 	int			flenght;
 
-	p = (char *)s1;
-	slenght = ft_strlen(s2);
-	flenght = ft_strlcat(p, s2, slenght);
-	u = flenght;
-	l = malloc(flenght * sizeof(char) + 1);
+	slenght = ft_strlen(s1);
+	flenght = ft_strlen(s2);
+	u = 0;
+	j = 0;
+	l = malloc((flenght + slenght + 1) * sizeof(char));
 	if (!l)
 		return (NULL);
-	while (u > 0)
+	while (s1[u])
 	{
-		l[u] = p[u];
-		u--;
+		l[u] = s1[u];
+			u++;
 	}
-	l[0] = p[0];
+	while (s2[j])
+		l[u++] = s2[j++];
+	l[u] = '\0';
 	return (l);
 }
