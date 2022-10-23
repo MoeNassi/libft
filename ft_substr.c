@@ -6,7 +6,7 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 10:00:55 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/22 10:53:58 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/10/22 17:46:39 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char		*l;
-	size_t		j;
-	size_t		o;
+	size_t	j;
+	char	*l;
+	size_t	o;
 
 	j = 0;
 	if (s)
@@ -28,7 +28,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 			return (0);
 		if (start >= o)
 			return (l);
-		while (j < len && start <= o)
+		while (j < len && start < o)
 		{
 			l[j] = s[start];
 			j++;

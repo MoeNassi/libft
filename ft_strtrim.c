@@ -6,14 +6,11 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 09:19:16 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/21 15:09:11 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/10/22 17:48:04 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
-#include <string.h>
-#include <stdlib.h>
 
 int	start(char const *s1, char const *set)
 {
@@ -22,7 +19,7 @@ int	start(char const *s1, char const *set)
 	i = 0;
 	while (s1[i] != '\0')
 	{
-		if (strchr(set, s1[i]) == NULL)
+		if (ft_strchr(set, s1[i]) == 0)
 			break ;
 		i++;
 	}
@@ -38,7 +35,7 @@ int	end(char const *s1, char const *set)
 	l = ft_strlen(s1) - 1;
 	while (h < l)
 	{
-		if (strrchr(set, s1[l]) == NULL)
+		if (ft_strrchr(set, s1[l]) == 0)
 			break ;
 		l--;
 	}
@@ -60,7 +57,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	s = malloc(b + 1);
 	if (!s)
 		return (NULL);
-	while (p < b)
+	while (s1[f] != '\0' && p < b)
 	{
 		s[p] = s1[f];
 		f++;

@@ -6,7 +6,7 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 15:47:42 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/22 10:23:36 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/10/22 17:38:01 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	diali(const char *haystack, const char *needle)
 
 	i = 0;
 	j = 0;
-	while (haystack[i] != '\0')
+	while (haystack[i] != '\0'&& *needle != '\0')
 	{
 		if (*needle != haystack[i])
 			return (0);
@@ -36,7 +36,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	char		*n;
 	size_t		j;
 
-	if (len == 0)
+	if (haystack == NULL && len == 0)
 		return (NULL);
 	i = 0;
 	j = 0;
@@ -51,5 +51,5 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		h++;
 		i++;
 	}
-	return (NULL);
+	return (0);
 }
