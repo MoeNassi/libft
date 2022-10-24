@@ -6,7 +6,7 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 15:47:42 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/23 14:12:00 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/10/23 15:30:55 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,4 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		i++;
 	}
 	return (0);
-}
-
-int main()
-{
-	printf("%s\n", ft_strnstr((void *)0, "fake", 3));
-	printf("%s\n", strnstr((void *)0, "fake", 3));
 }

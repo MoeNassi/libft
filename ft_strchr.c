@@ -6,7 +6,7 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 10:17:51 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/20 14:50:00 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/10/23 14:53:33 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,19 @@
 char	*ft_strchr(const char *s, int c)
 {
 	int		i;
+	char	l;
 	char	*p;
 
 	p = (char *)s;
+	l = (char )c;
 	i = 0;
 	while (p[i] != '\0')
 	{
-		if (p[i] == c)
+		if (p[i] == l)
 			return (&p[i]);
 		i++;
 	}
-	if (c == 0)
-		return ((char *)&p[i]);
-	return (0);
+	if (!l)
+		return (&p[i]);
+	return (NULL);
 }

@@ -6,14 +6,13 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 18:19:21 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/20 07:53:08 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/10/24 07:16:28 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-void	*ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
 	char		*p;
 	char		*k;
