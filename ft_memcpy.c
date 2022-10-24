@@ -6,7 +6,7 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 05:21:19 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/19 09:25:58 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/10/24 17:41:51 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	i = 0;
 	d = (unsigned char *)dst;
 	s = (unsigned char *)src;
+	if (dst == src)
+		return (dst);
 	if (!d && !s)
 		return (0);
 	while (i < n)
@@ -30,4 +32,10 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		i++;
 	}
 	return (d);
+}
+
+int main()
+{
+	printf("%s\n", memcpy("abc", "abc", -1));
+	printf("%s\n", ft_memcpy("abc", "abc", -1));
 }

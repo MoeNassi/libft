@@ -6,7 +6,7 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 09:19:16 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/23 11:12:29 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/10/24 13:52:18 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	end(char const *s1, char const *set)
 
 	h = 0;
 	l = ft_strlen(s1) - 1;
-	while (h < l)
+	while (l >= 0)
 	{
 		if (ft_strrchr(set, s1[l]) == 0)
 			break ;
@@ -56,6 +56,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	f = start(s1, set);
 	b = end(s1, set) - f + 1;
 	p = 0;
+	if (end(s1, set) == -1)
+		return ((char *)&s1[f]);
 	s = malloc(b + 1);
 	if (!s)
 		return (NULL);

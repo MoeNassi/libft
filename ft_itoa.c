@@ -6,7 +6,7 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 07:17:17 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/24 10:59:14 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/10/24 18:54:45 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,27 +29,34 @@ char	*ft_itoa(int n)
 {
 	char	*l;
 	int		i;
-	int		j;
+	long	s;
 
-	j = 0;
-	i = count(n);
-	if (n < 0)
-		i = count(n) + 1;
+	s = (long)n;
+	i = count(s);
+	if (s < 0 || s == 0)
+		i = count(s) + 1;
 	l = malloc(i * sizeof(char) + 1);
 	if (!l)
 		return (NULL);
 	l[i] = '\0';
-	if (n < 0)
+	if (s == 0)
+		l[0] = s + '0';
+	if (s < 0)
 	{
-		l[j] = '-';
-		n = n * (-1);
-		j++;
+		l[0] = '-';
+		s = s * (-1);
 	}
-	while (n != 0)
+	while (s != 0)
 	{
-		l[i - 1] = (n % 10) + '0';
-		n = n / 10;
+		l[i - 1] = (s % 10) + '0';
+		s = s / 10;
 		i--;
 	}
 	return (l);
 }
+
+// int main()
+// {
+// 	int 	i = -2147483648;
+// 	printf("%s\n", ft_itoa(i));
+// }
