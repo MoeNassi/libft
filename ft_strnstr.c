@@ -6,13 +6,13 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 15:47:42 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/23 15:30:55 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/10/25 15:03:41 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	diali(const char *haystack, const char *needle)
+static int	diali(const char *haystack, const char *needle)
 {
 	size_t		i;
 	size_t		j;
@@ -36,7 +36,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	char		*n;
 	size_t		j;
 
-	if (!haystack || !len)
+	if (haystack == NULL)
 		return (NULL);
 	i = 0;
 	j = 0;

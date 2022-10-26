@@ -6,11 +6,10 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 17:09:45 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/19 10:45:45 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/10/25 13:49:35 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)

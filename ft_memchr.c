@@ -6,12 +6,11 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 22:56:58 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/23 14:55:25 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/10/25 13:49:15 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

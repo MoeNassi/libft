@@ -6,7 +6,7 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 10:38:36 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/22 16:07:15 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/10/25 13:48:14 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 #include "libft.h"
 
-int	lenght(char const *s1, char const *s2)
+static int	lenght(char const *s1, char const *s2)
 {
 	int		i;
 	int		j;

@@ -6,13 +6,11 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 15:35:14 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/18 17:21:46 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/10/25 13:49:39 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
 void	*ft_memset(void *b, int c, size_t len)
 {

@@ -1,56 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 07:17:17 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/26 13:13:06 by mnassi           ###   ########.fr       */
+/*   Created: 2022/10/26 10:07:58 by mnassi            #+#    #+#             */
+/*   Updated: 2022/10/26 14:51:54 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count(int n)
+int	ft_lstsize(t_list	*lst)
 {
-	int	i;
+	int		c;
+	t_list	*temp;
 
-	i = 0;
-	if (n < 0 || n == 0)
-		i = i + 1;
-	while (n != 0)
+	if (!lst)
+		return (0);
+	c = 0;
+	temp = lst;
+	while (temp != NULL)
 	{
-		n = n / 10;
-		i++;
+		temp = temp -> next;
+		c++;
 	}
-	return (i);
+	return (c);
 }
 
-char	*ft_itoa(int n)
+int	main(void)
 {
-	char	*l;
-	int		i;
-	long	s;
+  int x = 7;
+  int y = 5;
 
-	s = (long)n;
-	i = count(s);
-	l = malloc(i * sizeof(char) + 1);
-	if (!l)
-		return (NULL);
-	l[i] = '\0';
-	if (s == 0)
-		l[0] = s + '0';
-	if (s < 0)
-	{
-		l[0] = '-';
-		s = s * (-1);
-	}
-	while (s > 0)
-	{
-		l[i - 1] = (s % 10) + '0';
-		s = s / 10;
-		i--;
-	}
-	return (l);
+	t_list	*head;
+	t_list	*last;
+
+	head = malloc(sizeof(t_list *));
+	head -> next -> content = &x;
+	last = malloc(sizeof(t_list *));
+	head -> next = last;
+	last-> next -> content =&y;
+	last -> next = NULL;
+	//printf("%d", ft_lstsize(head));
 }

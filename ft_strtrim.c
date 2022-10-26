@@ -6,13 +6,13 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 09:19:16 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/24 13:52:18 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/10/25 13:48:49 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	start(char const *s1, char const *set)
+static int	start(char const *s1, char const *set)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ int	start(char const *s1, char const *set)
 	return (i);
 }
 
-int	end(char const *s1, char const *set)
+static int	end(char const *s1, char const *set)
 {
 	int		h;
 	int		l;

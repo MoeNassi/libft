@@ -6,7 +6,7 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 08:57:44 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/18 18:16:25 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/10/26 09:59:13 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_atoi(const char *str)
 {
-	int		i;
+	long	i;
 	int		c;
 	int		minus;
 
