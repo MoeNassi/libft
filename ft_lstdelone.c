@@ -1,36 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 17:09:45 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/27 18:17:32 by mnassi           ###   ########.fr       */
+/*   Created: 2022/10/27 08:43:01 by mnassi            #+#    #+#             */
+/*   Updated: 2022/10/27 11:17:21 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	size_t		i;
-	char		*s;
-	char		*d;
+	t_list	*delete;
 
-	d = (char *)dst;
-	s = (char *)src;
-	i = 0;
-	if (d == 0 && s == 0)
-		return (NULL);
-	if (d < s)
-		ft_memcpy(d, s, len);
-	if (d >= s)
-	{
-		while (len--)
-		{
-			d[len] = s[len];
-		}
-	}
-	return (d);
+	if (!lst || !del)
+		return ;
+	delete = lst;
+	del(delete -> content);
+	free(delete);
 }

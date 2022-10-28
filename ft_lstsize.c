@@ -6,7 +6,7 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 10:07:58 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/26 14:51:54 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/10/28 12:50:13 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,13 @@
 
 int	ft_lstsize(t_list	*lst)
 {
-	int		c;
-	t_list	*temp;
+	int		i;
 
-	if (!lst)
-		return (0);
-	c = 0;
-	temp = lst;
-	while (temp != NULL)
+	i = 0;
+	while (lst)
 	{
-		temp = temp -> next;
-		c++;
+		lst = lst -> next;
+		i++;
 	}
-	return (c);
-}
-
-int	main(void)
-{
-  int x = 7;
-  int y = 5;
-
-	t_list	*head;
-	t_list	*last;
-
-	head = malloc(sizeof(t_list *));
-	head -> next -> content = &x;
-	last = malloc(sizeof(t_list *));
-	head -> next = last;
-	last-> next -> content =&y;
-	last -> next = NULL;
-	//printf("%d", ft_lstsize(head));
+	return (i);
 }

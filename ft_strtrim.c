@@ -6,7 +6,7 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 09:19:16 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/25 13:48:49 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/10/28 10:32:15 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ static int	start(char const *s1, char const *set)
 	return (i);
 }
 
-static int	end(char const *s1, char const *set)
+static	int	end(char const *s1, char const *set)
 {
-	int		h;
-	int		l;
+	int	h;
+	int	l;
 
 	h = 0;
 	l = ft_strlen(s1) - 1;

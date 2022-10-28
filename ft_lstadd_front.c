@@ -6,7 +6,7 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 13:33:26 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/26 14:58:55 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/10/28 10:20:10 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!lst || !new)
-	  return ;
+		return ;
 	new -> next = *lst;
 	*lst = new;
 }
