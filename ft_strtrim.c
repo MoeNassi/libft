@@ -6,7 +6,7 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 09:19:16 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/28 10:32:15 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/10/30 13:25:08 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,13 +52,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (set[0] == '\0')
 		return ((char *)s1);
 	if (s1 == NULL)
-		return (0);
+		return (NULL);
 	f = start(s1, set);
-	b = end(s1, set) - f + 1;
+	b = (end(s1, set) - f) + 1;
 	p = 0;
-	if (end(s1, set) == -1)
+	if (end(s1, set) == - 1)
 		return ((char *)&s1[f]);
-	s = malloc(b + 1);
+	s = malloc((b + 1) * sizeof(char));
 	if (!s)
 		return (NULL);
 	while (s1[f] != '\0' && p < b)
