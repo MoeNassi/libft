@@ -6,7 +6,7 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 10:54:44 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/30 11:02:30 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/10/31 16:10:14 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,9 @@ char	**ft_split(char const *s, char c)
 	j = 0;
 	y = 0;
 	if (!s)
-		return (NULL);	
+		return (NULL);
 	ct = count(s, c);
-	mok = (char **)malloc(((ct + 1) * sizeof(char *)));
+	mok = (char **)malloc((ct + 1) * sizeof(char *));
 	if (!mok)
 		return (NULL);
 	while (y < ct)
@@ -70,17 +70,5 @@ char	**ft_split(char const *s, char c)
 			return (freesplit(mok, 0), NULL);
 		y++;
 	}
-	return (mok[y] = 0, mok)   ;
+	return (mok[y] = NULL, mok);
 }
-
-// int main()
-// {
-// 	char **tab = ft_split("     ", ' ');
-// 	int i;
-
-// 	i = -1;
-// 	while(tab[++i])
-// 		printf("%s\n", tab[i]);		
-// printf("%s\n", tab[i]);	
-
-// }

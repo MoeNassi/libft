@@ -6,7 +6,7 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 10:00:55 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/28 18:53:33 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/10/31 14:28:30 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		l = malloc(len + 1);
 		if (!l)
 			return (NULL);
-		
 		while (j < len && start < o && s[start])
 		{
 			l[j] = s[start];

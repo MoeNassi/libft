@@ -6,7 +6,7 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 17:09:45 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/27 18:17:32 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/10/31 17:34:20 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		return (NULL);
 	if (d < s)
 		ft_memcpy(d, s, len);
-	if (d >= s)
+	if (d > s)
 	{
 		while (len--)
 		{
@@ -33,4 +33,11 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		}
 	}
 	return (d);
+}
+
+int main()
+{
+	char s[] = "hello";
+	char	p[] = "World";
+	printf("%s", ft_memmove(s, p, 3));
 }

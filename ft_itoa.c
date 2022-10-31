@@ -6,7 +6,7 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 07:17:17 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/26 13:13:06 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/10/31 11:30:03 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	count(int n)
 {
-	int	i;
+	int		i;
 
 	i = 0;
 	if (n < 0 || n == 0)
@@ -35,7 +35,7 @@ char	*ft_itoa(int n)
 
 	s = (long)n;
 	i = count(s);
-	l = malloc(i * sizeof(char) + 1);
+	l = malloc(i + 1);
 	if (!l)
 		return (NULL);
 	l[i] = '\0';
