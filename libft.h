@@ -6,7 +6,7 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 13:20:19 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/31 18:20:22 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/11/02 08:45:56 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 char	**ft_split(char const *s, char c);
-void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 10:54:44 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/31 16:10:14 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/11/02 11:46:35 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int	count(char const *s, char c)
 {
 	int		i;
-	int	counter;
+	int		counter;
 
 	counter = 0;
 	i = 0;
@@ -31,7 +31,7 @@ static int	count(char const *s, char c)
 	return (counter);
 }
 
-static void freesplit(char **s, int i)
+static void	freesplit(char **s, int i)
 {
 	while (s[i])
 	{
@@ -44,21 +44,19 @@ static void freesplit(char **s, int i)
 char	**ft_split(char const *s, char c)
 {
 	char	**mok;
-	size_t		i;
-	size_t		j;
+	size_t	i;
+	size_t	j;
 	int		y;
-	int		ct;
 
 	i = 0;
 	j = 0;
-	y = 0;
+	y = -1;
 	if (!s)
 		return (NULL);
-	ct = count(s, c);
-	mok = (char **)malloc((ct + 1) * sizeof(char *));
+	mok = (char **)malloc((count(s, c) + 1) * sizeof(char *));
 	if (!mok)
 		return (NULL);
-	while (y < ct)
+	while (++y < count(s, c))
 	{
 		while (s[i] == c && s[i] != '\0')
 			i++;
@@ -68,7 +66,6 @@ char	**ft_split(char const *s, char c)
 		mok[y] = ft_substr(s, j, i - j);
 		if (!mok[y])
 			return (freesplit(mok, 0), NULL);
-		y++;
 	}
 	return (mok[y] = NULL, mok);
 }

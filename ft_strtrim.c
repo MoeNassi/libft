@@ -6,7 +6,7 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 09:19:16 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/31 16:16:39 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/11/01 15:50:20 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	f = start(s1, set);
 	b = (end(s1, set) - f) + 1;
 	p = 0;
-	if (end(s1, set) == - 1)
+	if (end(s1, set) == -1)
 		return (ft_substr(s1, f, 0));
 	s = malloc(b + 1);
 	if (!s)
