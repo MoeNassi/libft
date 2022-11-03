@@ -6,13 +6,9 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 10:38:36 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/25 13:48:14 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/11/03 10:27:37 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdlib.h>
-#include "libft.h"
-#include <stdio.h>
 
 #include "libft.h"
 

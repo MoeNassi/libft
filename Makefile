@@ -6,10 +6,7 @@ SOURCES = \
 	ft_memmove.c ft_calloc.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_substr.c ft_itoa.c \
     ft_strrchr.c ft_strncmp.c ft_memchr.c ft_atoi.c ft_strnstr.c ft_putnbr_fd.c ft_striteri.c  ft_split.c\
 
-BSOURCES =  ft_lstadd_front.c ft_lstnew.c ft_lstdelone.c ft_lstsize.c ft_lstclear.c ft_lstlast.c ft_lstadd_back.c\
-
 OBJECTS = $(SOURCES:.c=.o)
-BOBJECTS = $(BSOURCES:.c=.o)
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
@@ -19,10 +16,7 @@ all: $(NAME)
 $(NAME): $(OBJECTS)
 	ar -r $@ $?
 
-bonus: $(OBJECTS) $(BOBJECTS)
-	ar -r $(NAME) $?
-
-%.o: %.c
+%.o: %.c libft.h
 	$(CC) -c $(CFLAGS) $?
 
 clean:

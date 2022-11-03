@@ -6,7 +6,7 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 08:06:46 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/25 13:49:20 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/11/03 15:29:26 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		return (0);
 	while (j < n)
 	{
-		if (p[j] > s[j] || p[j] < s[j])
-			return (((unsigned char )p[j]) - ((unsigned char )s[j]));
+		if (p[j] != s[j])
+			return (p[j] - (s[j]));
 		j++;
 	}
 	return (0);

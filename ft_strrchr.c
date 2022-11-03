@@ -6,13 +6,11 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 07:41:25 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/23 15:06:27 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/11/03 10:28:14 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
 char	*ft_strrchr(const char *s, int c)
 {

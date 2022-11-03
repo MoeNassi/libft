@@ -6,13 +6,11 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 14:45:33 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/16 14:28:36 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/11/03 10:27:24 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 size_t	ft_strlen(const char *s)
 {

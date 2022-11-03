@@ -6,7 +6,7 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 05:21:19 by mnassi            #+#    #+#             */
-/*   Updated: 2022/10/31 17:31:34 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/11/03 15:22:07 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	if (dst == src)
 		return (dst);
 	if (!d && !s)
-		return (0);
+		return (NULL);
 	while (i < n)
 	{
 		d[i] = s[i];
