@@ -6,7 +6,7 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 10:38:36 by mnassi            #+#    #+#             */
-/*   Updated: 2022/11/03 10:27:37 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/11/06 12:13:22 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int			slenght;
 
 	if (!s1 || !s2)
-		return (0);
+		return (NULL);
 	slenght = lenght(s1, s2);
 	u = 0;
 	j = 0;
 	l = malloc((slenght + 1) * sizeof(char));
 	if (!l)
-		return (NULL);
-	if (!s1 || !s2)
 		return (NULL);
 	while (s1[u] != '\0')
 	{

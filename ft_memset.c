@@ -6,7 +6,7 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 15:35:14 by mnassi            #+#    #+#             */
-/*   Updated: 2022/11/03 15:30:22 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/11/08 10:04:36 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ void	*ft_memset(void *b, int c, size_t len)
 		*(s + i) = (unsigned char)c;
 		i++;
 	}
-	return (b);
+	return (s);
 }

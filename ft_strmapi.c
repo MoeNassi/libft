@@ -6,7 +6,7 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 07:55:35 by mnassi            #+#    #+#             */
-/*   Updated: 2022/11/03 09:47:08 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/11/07 11:09:59 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*str;
 	int		i;
 
-	if (!s)
+	if (!s || !f)
 		return (NULL);
 	i = 0;
 	ind = ft_strlen(s);

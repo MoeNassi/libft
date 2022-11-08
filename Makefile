@@ -9,15 +9,12 @@ SOURCES = \
 OBJECTS = $(SOURCES:.c=.o)
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(NAME): $(OBJECTS)
+$(NAME): $(OBJECTS) libft.h
 	ar -r $@ $?
-
-%.o: %.c libft.h
-	$(CC) -c $(CFLAGS) $?
 
 clean:
 	rm -f $(OBJECTS)
@@ -26,3 +23,5 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+.PHONY : clean re fclean all

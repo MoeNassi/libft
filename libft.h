@@ -6,7 +6,7 @@
 /*   By: mnassi <mnassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 13:20:19 by mnassi            #+#    #+#             */
-/*   Updated: 2022/11/03 16:15:28 by mnassi           ###   ########.fr       */
+/*   Updated: 2022/11/07 09:20:06 by mnassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <limits.h>
 # include <fcntl.h>
 # include <string.h>
 # include <stdio.h>
